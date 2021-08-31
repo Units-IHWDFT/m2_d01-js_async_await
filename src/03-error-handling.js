@@ -24,6 +24,9 @@ async function getCoffee() {
     await obtainDirections(1);
     await obtainDirections(2);
     await obtainDirections(3);
+
+    // This will result in a rejected Promise as direction step 4 doesn't exist:
+    // await obtainDirections(4);
     
     console.log('You arrived at your destination!');
   } catch(err) {
