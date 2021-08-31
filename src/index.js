@@ -18,13 +18,17 @@ function obtainDirections(step) {
   })
 }
 
-
 async function getCoffee() {
-  await obtainDirections(0);
-  await obtainDirections(1);
-  await obtainDirections(2);
-  await obtainDirections(3);
-  console.log('You arrived at your destination!');
+  try {
+    await obtainDirections(0);
+    await obtainDirections(1);
+    await obtainDirections(2);
+    await obtainDirections(3);
+    
+    console.log('You arrived at your destination!');
+  } catch(err) {
+    console.log(err)
+  } 
 }
 
 
